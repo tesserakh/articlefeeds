@@ -4,19 +4,19 @@ Get articles from tech-blog's RSS feeds. The library is using [feedparser](https
 
 Blog list:
 
-| Blog                  | Object (class)  | Argument   |
-|-----------------------|-----------------|------------|
-| AWS Blog              | `Aws()`         | `topic`    |
-| Comparitech           | `Comparitech()` | -          |
-| DataHen               | `DataHen()`     | -          |
-| Dev Community         | `Devto()`       | -          |
-| DZone                 | `Dzone()`       | `category` |
-| Hashnode              | `Hashnode()`    | `tag`      |
-| Machine Learning Mastery | `MachineLearningMastery()` | `topic` |
-| Medium                | `Medium()`      | `publication`, `tag` |
-| Software Engineering Daily | `SoftwareEngDaily()` | `topic` |
-| Toptal Blog           | `Toptal()`      | -       |
-| Uber Development Blog | `Uber()`        | -       |
+| Blog                       | Object (class)    | Argument   |
+|----------------------------|-------------------|------------|
+| AWS Blog                   | `Aws()`           | `category` |
+| Comparitech                | `Comparitech()`   | -          |
+| DataHen                    | `DataHen()`       | -          |
+| Dev Community              | `Devto()`         | -          |
+| DZone                      | `Dzone()`         | `category` |
+| Hashnode                   | `Hashnode()`      | `tag`      |
+| Machine Learning Mastery   | `MachineLearningMastery()` | `category` |
+| Medium                     | `Medium()`        | `publication`, `tag` |
+| Software Engineering Daily | `SoftwareEngDaily()` | `category` |
+| Toptal Blog                | `Toptal()`        | -          |
+| Uber Development Blog      | `Uber()`          | -          |
 
 Listing on progress ([spreadsheet](https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view))
 
@@ -30,7 +30,7 @@ git clone https://github.com/tesserakh/articlefeeds.git
 
 ## Usage
 
-AWS blog, Hashnode, DZone, Machine Learning Mastery, etc. can use topic, tag, or category as an input. See blog list table for detail. Below is sample for AWS blog:
+AWS blog, Hashnode, DZone, etc. can use topic, tag, or category as an input. See blog list table for detail. Below is sample for AWS blog:
 
 
 ```python
