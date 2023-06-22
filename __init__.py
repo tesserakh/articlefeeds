@@ -7,5 +7,6 @@ from .dzone import Dzone
 from .hashnode import Hashnode
 from .mlmastery import MachineLearningMastery
 from .medium import Medium
+from .softwareengineeringdaily import SoftwareEngDaily
 from .toptal import Toptal
 from .uber import Uber

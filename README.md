@@ -1,21 +1,22 @@
 # Article Feeds
 
-Get articles from tech-blog's RSS feeds. The module is using feedparser as dependency.
+Get articles from tech-blog's RSS feeds. The library is using [feedparser](https://github.com/kurtmckee/feedparser) as dependency.
 
 Blog list:
 
-| Blog           | Object (class)  | Argument   |
-|----------------|-----------------|------------|
-| AWS Blog       | `Aws()`         | `topic`    |
-| Comparitech    | `Comparitech()` | -          |
-| DataHen        | `DataHen()`     | -          |
-| Dev Community  | `Devto()`       | -          |
-| DZone          | `Dzone()`       | `category` |
-| Hashnode       | `Hashnode()`    | `tag`      |
+| Blog                  | Object (class)  | Argument   |
+|-----------------------|-----------------|------------|
+| AWS Blog              | `Aws()`         | `topic`    |
+| Comparitech           | `Comparitech()` | -          |
+| DataHen               | `DataHen()`     | -          |
+| Dev Community         | `Devto()`       | -          |
+| DZone                 | `Dzone()`       | `category` |
+| Hashnode              | `Hashnode()`    | `tag`      |
 | Machine Learning Mastery | `MachineLearningMastery()` | `topic` |
-| Medium         | `Medium()`         | `publication`, `tag` |
-| Toptal Blog    | `Toptal()`         | -       |
-| Uber Development Blog | `Uber()`    | -       |
+| Medium                | `Medium()`      | `publication`, `tag` |
+| Software Engineering Daily | `SoftwareEngDaily()` | `topic` |
+| Toptal Blog           | `Toptal()`      | -       |
+| Uber Development Blog | `Uber()`        | -       |
 
 Listing on progress ([spreadsheet](https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view))
 
@@ -29,7 +30,7 @@ git clone https://github.com/tesserakh/articlefeeds.git
 
 ## Usage
 
-AWS blog, Hashnode, DZone, Machine Learning Mastery can use topic, tag, or category as an input. Below is sample for AWS blog:
+AWS blog, Hashnode, DZone, Machine Learning Mastery, etc. can use topic, tag, or category as an input. See blog list table for detail. Below is sample for AWS blog:
 
 
 ```python
@@ -102,6 +103,8 @@ toptal_filepath = articlefeeds.create_storage_path("toptal.json", path="data")
 with open(toptal_filepath, "w") as fout:
     json.dump(toptal_filter, fout)
 ```
+
+### Result
 
 Sample result using tag "python" for Medium blog:
 
