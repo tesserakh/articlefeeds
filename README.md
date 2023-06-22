@@ -4,18 +4,20 @@ Get articles from tech-blog's RSS feeds. The module is using feedparser as depen
 
 Blog list:
 
-- AWS blog (arg: topic)
-- Comparitech
-- DataHen
-- Dev Community
-- DZone (arg: category)
-- Hashnode (arg: tag)
-- Machine Learning Mastery (arg: topic)
-- Medium (arg: publication, tag)
-- Toptal Blog
-- Uber Development Blog
+| Blog           | Object (class)  | Argument   |
+|----------------|-----------------|------------|
+| AWS Blog       | `Aws()`         | `topic`    |
+| Comparitech    | `Comparitech()` | -          |
+| DataHen        | `DataHen()`     | -          |
+| Dev Community  | `Devto()`       | -          |
+| DZone          | `Dzone()`       | `category` |
+| Hashnode       | `Hashnode()`    | `tag`      |
+| Machine Learning Mastery | `MachineLearningMastery()` | `topic` |
+| Medium         | `Medium()`         | `publication`, `tag` |
+| Toptal Blog    | `Toptal()`         | -       |
+| Uber Development Blog | `Uber()`    | -       |
 
-Listing on [spreadsheet](https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view) (progress)
+Listing on progress ([spreadsheet](https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view))
 
 ## Installation
 
