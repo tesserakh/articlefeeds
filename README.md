@@ -4,17 +4,18 @@ Get articles from tech-blog's RSS feeds. The module is using feedparser as depen
 
 Blog list:
 
-- AWS blog (argument: topic)
+- AWS blog (arg: topic)
 - Comparitech
 - DataHen
 - Dev Community
-- DZone (argument: category)
-- Hashnode (argument: tag)
-- Medium (argument: publication, tag)
+- DZone (arg: category)
+- Hashnode (arg: tag)
+- Machine Learning Mastery (arg: topic)
+- Medium (arg: publication, tag)
 - Toptal Blog
 - Uber Development Blog
 
-List: (spreadsheet)[https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view]
+Listing on [spreadsheet](https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view) (progress)
 
 ## Installation
 
@@ -26,7 +27,7 @@ git clone https://github.com/tesserakh/articlefeeds.git
 
 ## Usage
 
-AWS blog and Hashnode can use topic or tag as an input:
+AWS blog, Hashnode, DZone, Machine Learning Mastery can use topic, tag, or category as an input. Below is sample for AWS blog:
 
 
 ```python
