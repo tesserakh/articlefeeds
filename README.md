@@ -8,10 +8,13 @@ Blog list:
 - Comparitech
 - DataHen
 - Dev Community
+- DZone (argument: category)
 - Hashnode (argument: tag)
 - Medium (argument: publication, tag)
 - Toptal Blog
 - Uber Development Blog
+
+List: (spreadsheet)[https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view]
 
 ## Installation
 
