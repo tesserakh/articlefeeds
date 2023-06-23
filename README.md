@@ -4,21 +4,21 @@ Get articles from tech-blog's RSS feeds. The library is using [feedparser](https
 
 Blog list:
 
-| Blog                        | Object (class)    | Argument   |
-|-----------------------------|-------------------|------------|
-| AWS Blog                    | `Aws()`           | `topic`    |
-| Microsoft Azure Blog        | `Azure()`         | `category` |
-| Comparitech                 | `Comparitech()`   | -          |
-| DataHen                     | `DataHen()`       | -          |
-| Dev Community               | `Devto()`         | -          |
-| DZone                       | `Dzone()`         | `category` |
-| Hashnode                    | `Hashnode()`      | `tag`      |
-| Machine Learning Mastery    | `MachineLearningMastery()` | `category` |
-| Medium                      | `Medium()`        | `publication`, `tag` |
-| Salesforce Engineering Blog | `Salesforce()`    | -          |
-| Software Engineering Daily  | `SoftwareEngDaily()` | `category` |
-| Toptal Blog                 | `Toptal()`        | -          |
-| Uber Development Blog       | `Uber()`          | -          |
+| Blog                        | Object (class)    | Argument   | Mandatory? |
+|-----------------------------|-------------------|------------|:----------:|
+| AWS Blog                    | `Aws()`           | `topic`    | Yes        |
+| Microsoft Azure Blog        | `Azure()`         | `category` | No         |
+| Comparitech                 | `Comparitech()`   | -          | -          |
+| DataHen                     | `DataHen()`       | -          | -          |
+| Dev Community               | `Devto()`         | -          | -          |
+| DZone                       | `Dzone()`         | `category` | No         |
+| Hashnode                    | `Hashnode()`      | `tag`      | Yes        |
+| Machine Learning Mastery    | `MachineLearningMastery()` | `category` | No |
+| Medium                      | `Medium()`        | `publication`, `tag` | Yes (either) |
+| Salesforce Engineering Blog | `Salesforce()`    | -          | -          |
+| Software Engineering Daily  | `SoftwareEngDaily()` | `category` | No      |
+| Toptal Blog                 | `Toptal()`        | -          | -          |
+| Uber Development Blog       | `Uber()`          | -          | -          |
 
 Listing on progress ([spreadsheet](https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view))
 
@@ -32,6 +32,33 @@ git clone https://github.com/tesserakh/articlefeeds.git
 
 ## Usage
 
+Each blog has its own `BlogFeed` object which will pull the XML file from its website. When executed, it will give us raw XML structured by feedparser.
+
+```python
+from articlefeeds import Azure
+
+azure = Azure()
+print(azure.rawfeed)
+```
+
+In order to make it simpler and ready to use, leave only the fields needed, `parse()` method is provided for this work. The result will store in `feed`.
+
+```python
+azure.parse()
+print(azure.feed)
+```
+
+For some blogs, arguments can be used to filter posts according to category or tag. Others even require using tag.
+
+```python
+from articlefeeds import Aws
+
+aws = Aws("database").parse()
+print(aws.feed)
+```
+
+### More Example
+
 AWS blog, Azure blog, Hashnode, DZone, etc. can use category, tag, or topic as an input. See blog list table for detail. Below is sample for AWS blog:
 
 
@@ -41,9 +68,8 @@ import json
 
 aws_topics = ["storage", "database"]
 for topic in aws_topics:
-    naming = topic.lower().replace(" ", "-")
     feed = articlefeeds.Aws(topic=topic).parse()
-    filename = articlefeeds.create_filename(topic, prefix="aws")
+    filename = articlefeeds.create_filename(topic.lower(), prefix="aws")
     filepath = articlefeeds.create_storage_path(filename, path="data")
     with open(filepath, "w") as fout:
         json.dump(feed.feed, fout)
