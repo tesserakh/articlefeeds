@@ -42,6 +42,20 @@ class Aws(BlogFeed):
         self.rawfeed = self.fetch()
 
 
+class Azure(BlogFeed):
+    def __init__(self, category=None):
+        BlogFeed.__init__(
+            self,
+            url="https://azure.microsoft.com",
+            name="Microsoft Azure",
+        )
+        if category:
+            self.url = urljoin(self.url, f"/en-us/blog/category/{category}/feed/")
+        else:
+            self.url = urljoin(self.url, "/en-us/blog/feed/")
+        self.rawfeed = self.fetch()
+
+
 class Comparitech(BlogFeed):
     def __init__(self, tag=None):
         if tag:
@@ -97,6 +111,16 @@ class MachineLearningMastery(BlogFeed):
             self.url = urljoin(self.url, f"/category/{category}/feed/")
         else:
             self.url = urljoin(self.url, "/feed/")
+        self.rawfeed = self.fetch()
+
+
+class Salesforce(BlogFeed):
+    def __init__(self):
+        BlogFeed.__init__(
+            self,
+            url="https://engineering.salesforce.com/feed",
+            name="Salesforce Engineering",
+        )
         self.rawfeed = self.fetch()
 
 

@@ -4,11 +4,13 @@ from .medium import Medium
 from .toptal import Toptal
 from .blogfeed import (
     Aws,
+    Azure,
     Comparitech,
     DataHen,
     Devto,
     Dzone,
     MachineLearningMastery,
+    Salesforce,
     SoftwareEngDaily,
     Uber,
 )
