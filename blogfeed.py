@@ -114,6 +114,34 @@ class MachineLearningMastery(BlogFeed):
         self.rawfeed = self.fetch()
 
 
+class Meta(BlogFeed):
+    def __init__(self, category=None):
+        BlogFeed.__init__(
+            self,
+            url="https://engineering.fb.com",
+            name="Meta Engineering",
+        )
+        if category:
+            self.url = urljoin(self.url, f"/category/{category}/feed/")
+            category = category.replace("-", " ").title()
+            self.source = f"{self.source} - {category}"
+        else:
+            self.url = urljoin(self.url, "/feed/")
+        self.rawfeed = self.fetch()
+
+class OReilly(BlogFeed):
+    def __init__(self, topic=None):
+        if topic:
+            url = f"https://www.oreilly.com/radar/topics/{topic}/feed/index.xml"
+            topic = topic.replace("-", " ").title()
+            name = f"O'Reilly - {topic}"
+        else:
+            url = "https://www.oreilly.com/radar/feed/index.xml"
+            name = "O'Reilly"
+        BlogFeed.__init__(self, url=url, name=name)
+        self.rawfeed = self.fetch()
+
+
 class Salesforce(BlogFeed):
     def __init__(self):
         BlogFeed.__init__(

@@ -10,6 +10,8 @@ from .blogfeed import (
     Devto,
     Dzone,
     MachineLearningMastery,
+    Meta,
+    OReilly,
     Salesforce,
     SoftwareEngDaily,
     Uber,

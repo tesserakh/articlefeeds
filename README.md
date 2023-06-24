@@ -4,21 +4,23 @@ Get articles from tech-blog's RSS feeds. The library is using [feedparser](https
 
 Blog list:
 
-| Blog                        | Object (class)    | Argument   | Mandatory? |
-|-----------------------------|-------------------|------------|:----------:|
-| AWS Blog                    | `Aws()`           | `topic`    | Yes        |
-| Microsoft Azure Blog        | `Azure()`         | `category` | No         |
-| Comparitech                 | `Comparitech()`   | -          | -          |
-| DataHen                     | `DataHen()`       | -          | -          |
-| Dev Community               | `Devto()`         | -          | -          |
-| DZone                       | `Dzone()`         | `category` | No         |
-| Hashnode                    | `Hashnode()`      | `tag`      | Yes        |
-| Machine Learning Mastery    | `MachineLearningMastery()` | `category` | No |
-| Medium                      | `Medium()`        | `publication`, `tag` | Yes (either) |
-| Salesforce Engineering Blog | `Salesforce()`    | -          | -          |
-| Software Engineering Daily  | `SoftwareEngDaily()` | `category` | No      |
-| Toptal Blog                 | `Toptal()`        | -          | -          |
-| Uber Development Blog       | `Uber()`          | -          | -          |
+| Blog                        | Object (class)             | Argument   | Mandatory? |
+|-----------------------------|----------------------------|------------|:----------:|
+| AWS Blog                    | `Aws()`                    | `topic`    | Yes        |
+| Microsoft Azure Blog        | `Azure()`                  | `category` | No         |
+| Comparitech                 | `Comparitech()`            | -          | -          |
+| DataHen                     | `DataHen()`                | -          | -          |
+| Dev Community               | `Devto()`                  | -          | -          |
+| DZone                       | `Dzone()`                  | `category` | No         |
+| Hashnode                    | `Hashnode()`               | `tag`      | Yes        |
+| Machine Learning Mastery    | `MachineLearningMastery()` | `category` | No         |
+| O'Reilly                    | `OReilly()`                | `topic`    | No         |
+| Medium                      | `Medium()`                 | `publication`, `tag` | Yes (either) |
+| Meta (Facebook)             | `Meta()`                   | `category` | No         |
+| Salesforce Engineering Blog | `Salesforce()`             | -          | -          |
+| Software Engineering Daily  | `SoftwareEngDaily()`       | `category` | No         |
+| Toptal Blog                 | `Toptal()`                 | -          | -          |
+| Uber Development Blog       | `Uber()`                   | -          | -          |
 
 Listing on progress ([spreadsheet](https://docs.google.com/spreadsheets/d/1gM8kfnr-uu2-Li5S4ts5cFgx0APqJSJRCW3i5VWjFmk/view))
 
